@@ -1,8 +1,11 @@
 import { useState } from "react";
 import cards from "./cards";
+import getImage from "./getImage";
 import GlobalStyle from "./components/GlobalStyle";
 import { Wrapper, Header, MainTitle, Main, Footer } from "./App.styles";
 import Score from "./components/Score";
+import CardList from "./components/CardList";
+import Card from "./components/Card";
 
 function App() {
   const [state, setState] = useState({
@@ -10,12 +13,16 @@ function App() {
     currentScore: 0,
     currentLevel: 1,
     selectedCards: [],
-    currentLevelCards: null,
+    currentLevelCards: cards,
   });
 
   const score = {
     bestScore: state.bestScore,
     currentScore: state.currentScore,
+  };
+
+  const selectCard = (id) => {
+    console.log("selected card:", id);
   };
 
   return (
@@ -25,7 +32,17 @@ function App() {
         <MainTitle>Memory Game</MainTitle>
         <Score score={score} />
       </Header>
-      <Main></Main>
+      <Main>
+        <CardList>
+          {state.currentLevelCards.map((card) => (
+            <Card
+              key={card.id}
+              card={{ ...card, url: getImage(card.url) }}
+              selectCard={selectCard}
+            />
+          ))}
+        </CardList>
+      </Main>
       <Footer>
         <div>
           Icons made by{" "}
