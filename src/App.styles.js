@@ -21,6 +21,9 @@ export const MainTitle = styled.h1`
 
 export const Main = styled.main`
   flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #ddd;
 `;
 
