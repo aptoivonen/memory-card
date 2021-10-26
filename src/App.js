@@ -1,3 +1,4 @@
+import cards from "./cards";
 import GlobalStyle from "./components/GlobalStyle";
 
 function App() {

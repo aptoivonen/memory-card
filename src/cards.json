@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "url": "apple.png"
+  },
+  {
+    "id": 2,
+    "name": "Baguette",
+    "url": "baguette.png"
+  },
+  {
+    "id": 3,
+    "name": "Broccoli",
+    "url": "broccoli.png"
+  },
+  {
+    "id": 4,
+    "name": "Carrot",
+    "url": "carrot.png"
+  }
+]
