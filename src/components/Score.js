@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import styles from "styled-components";
+import styled from "styled-components";
 
-const Wrapper = styles.div`
+const Wrapper = styled.div`
   margin-right: auto;
   font-size: 1.5rem;
 `;
