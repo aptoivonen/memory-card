@@ -18,5 +18,35 @@
     "id": 4,
     "name": "Carrot",
     "url": "carrot.png"
+  },
+  {
+    "id": 5,
+    "name": "Cheese",
+    "url": "cheese.png"
+  },
+  {
+    "id": 6,
+    "name": "Coffee",
+    "url": "coffee.png"
+  },
+  {
+    "id": 7,
+    "name": "Lemon",
+    "url": "lemon.png"
+  },
+  {
+    "id": 8,
+    "name": "Pineapple",
+    "url": "pineapple.png"
+  },
+  {
+    "id": 9,
+    "name": "Raspberry",
+    "url": "raspberry.png"
+  },
+  {
+    "id": 10,
+    "name": "Sandwich",
+    "url": "sandwich.png"
   }
 ]
