@@ -6,6 +6,7 @@ import { Wrapper, Header, MainTitle, Main, Footer } from "./App.styles";
 import Score from "./components/Score";
 import CardList from "./components/CardList";
 import Card from "./components/Card";
+import Level from "./components/Level";
 
 function App() {
   const [state, setState] = useState({
@@ -29,7 +30,8 @@ function App() {
     <Wrapper>
       <GlobalStyle />
       <Header>
-        <MainTitle>Memory Game</MainTitle>
+        <MainTitle>Bite Memory</MainTitle>
+        <Level currentLevel={state.currentLevel} />
         <Score score={score} />
       </Header>
       <Main>
