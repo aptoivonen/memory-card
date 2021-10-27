@@ -3,7 +3,7 @@ import { Container, Name, Image } from "./Card.styles";
 
 const Card = ({ card: { id, name, url }, selectCard }) => {
   return (
-    <Container onClick={() => selectCard(id)}>
+    <Container tabIndex={0} onClick={() => selectCard(id)}>
       <Name>{name}</Name>
       <Image src={url} />
     </Container>
