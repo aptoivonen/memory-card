@@ -28,9 +28,3 @@ export const Main = styled.main`
   padding-top: 2rem;
   background: #ddd;
 `;
-
-export const Footer = styled.footer`
-  height: 100px;
-  padding: 1rem;
-  background: #aaa;
-`;

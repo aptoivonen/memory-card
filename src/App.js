@@ -2,11 +2,12 @@ import { useState } from "react";
 import cards from "./cards";
 import getImage from "./getImage";
 import GlobalStyle from "./components/GlobalStyle";
-import { Wrapper, Header, MainTitle, Main, Footer } from "./App.styles";
+import { Wrapper, Header, MainTitle, Main } from "./App.styles";
 import Score from "./components/Score";
 import CardList from "./components/CardList";
 import Card from "./components/Card";
 import Level from "./components/Level";
+import Footer from "./components/Footer";
 
 function App() {
   const [state, setState] = useState({
@@ -45,21 +46,7 @@ function App() {
           ))}
         </CardList>
       </Main>
-      <Footer>
-        <div>
-          Icons made by{" "}
-          <a
-            href="https://www.flaticon.com/authors/smashicons"
-            title="Smashicons"
-          >
-            Smashicons
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-      </Footer>
+      <Footer />
     </Wrapper>
   );
 }
