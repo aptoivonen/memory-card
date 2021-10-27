@@ -97,7 +97,7 @@ function App() {
     <Wrapper>
       <GlobalStyle />
       <Header>
-        <MainTitle>Bite Memory</MainTitle>
+        <MainTitle>Food Memory</MainTitle>
         <Level currentLevel={state.currentLevel} />
         <Score score={score} />
       </Header>
