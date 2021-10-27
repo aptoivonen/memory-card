@@ -1,6 +1,7 @@
 import { useState } from "react";
 import cards from "./cards";
 import getImage from "./getImage";
+import { getLevelCards } from "./cardUtil";
 import GlobalStyle from "./components/GlobalStyle";
 import { Wrapper, Header, MainTitle, Main } from "./App.styles";
 import Score from "./components/Score";
@@ -9,14 +10,16 @@ import Card from "./components/Card";
 import Level from "./components/Level";
 import Footer from "./components/Footer";
 
+const getShuffledCards = getLevelCards(cards);
+
 function App() {
-  const [state, setState] = useState({
+  const [state, setState] = useState(() => ({
     bestScore: 0,
     currentScore: 0,
     currentLevel: 1,
     selectedCards: [],
-    currentLevelCards: cards,
-  });
+    currentLevelCards: getShuffledCards(1),
+  }));
 
   const score = {
     bestScore: state.bestScore,
@@ -26,6 +29,8 @@ function App() {
   const selectCard = (id) => {
     console.log("selected card:", id);
   };
+
+  console.log(getShuffledCards(1));
 
   return (
     <Wrapper>
