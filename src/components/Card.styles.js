@@ -6,12 +6,16 @@ export const Container = styled.article`
   justify-content: space-between;
   width: 180px;
   height: 250px;
+  margin: 0 2rem 2rem 0;
   padding: 1rem 0;
   background: greenyellow;
-  border: 1px solid black;
+  transition: transform 0.07s ease-in;
+  cursor: pointer;
 
-  & + & {
-    margin-left: 2rem;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px 2px #fff;
   }
 `;
 
@@ -21,7 +25,7 @@ export const Name = styled.h2`
   text-align: center;
   letter-spacing: 0.3ch;
   color: #333;
-  border-top: 1px solid black;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
 `;
 
 export const Image = styled.img`

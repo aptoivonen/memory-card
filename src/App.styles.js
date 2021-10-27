@@ -10,20 +10,22 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   height: 100px;
-  padding: 1rem;
   background: #ccc;
 `;
 
 export const MainTitle = styled.h1`
-  margin-right: auto;
-  font-size: 1.5rem;
+  margin: 0 auto 0 1ch;
+  font-size: 3rem;
+  letter-spacing: 0.5ch;
 `;
 
 export const Main = styled.main`
   flex: 1 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
   background: #ddd;
 `;
 
