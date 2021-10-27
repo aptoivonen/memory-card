@@ -8,8 +8,7 @@ export const Container = styled.article`
   width: calc(2 / 3 * var(--base-size));
   height: var(--base-size);
   margin: 0 2rem 2rem 0;
-  /* padding: 1rem 0; */
-  background: greenyellow;
+  background: linear-gradient(to top, #a1c4fd 0%, #c2e9fb 100%);
   transition: transform 0.07s ease-in;
   cursor: pointer;
 
