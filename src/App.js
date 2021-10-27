@@ -16,14 +16,16 @@ import Footer from "./components/Footer";
 const getShuffledCards = getLevelCards(cards);
 
 function App() {
-  const [state, setState] = useState(() => ({
+  const getInitialState = () => ({
     bestScore: 0,
     currentScore: 0,
     currentLevel: 1,
     selectedCards: [],
     currentLevelCards: getShuffledCards(1),
     isGameWon: false,
-  }));
+  });
+
+  const [state, setState] = useState(getInitialState);
 
   const selectCard = (id) => {
     // Player clicked already picked card on this level
@@ -82,6 +84,10 @@ function App() {
     });
   };
 
+  const restart = () => {
+    setState(getInitialState);
+  };
+
   const score = {
     bestScore: state.bestScore,
     currentScore: state.currentScore,
@@ -97,7 +103,7 @@ function App() {
       </Header>
       <Main>
         {state.isGameWon ? (
-          <GameWon />
+          <GameWon onClick={restart} />
         ) : (
           <CardList>
             {state.currentLevelCards.map((card) => (

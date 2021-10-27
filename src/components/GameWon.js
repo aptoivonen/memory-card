@@ -1,7 +1,9 @@
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Component = styled.div`
   color: green;
+  cursor: pointer;
   animation: pulse 2s infinite;
 
   @keyframes pulse {
@@ -27,13 +29,17 @@ const SmallText = styled.p`
   text-align: center;
 `;
 
-const GameWon = () => {
+const GameWon = ({ onClick }) => {
   return (
-    <Component>
+    <Component onClick={onClick}>
       <Text>You Got 'Em!</Text>
       <SmallText>Click To Restart</SmallText>
     </Component>
   );
+};
+
+GameWon.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default GameWon;
