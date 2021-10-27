@@ -10,6 +10,7 @@ import Score from "./components/Score";
 import CardList from "./components/CardList";
 import Card from "./components/Card";
 import Level from "./components/Level";
+import GameWon from "./components/GameWon";
 import Footer from "./components/Footer";
 
 const getShuffledCards = getLevelCards(cards);
@@ -21,12 +22,8 @@ function App() {
     currentLevel: 1,
     selectedCards: [],
     currentLevelCards: getShuffledCards(1),
+    isGameWon: true,
   }));
-
-  const score = {
-    bestScore: state.bestScore,
-    currentScore: state.currentScore,
-  };
 
   const selectCard = (id) => {
     console.log("selected card:", id);
@@ -67,22 +64,7 @@ function App() {
       const [newCurrentLevel, newCurrentLevelCards] = areAllCardsPicked
         ? [currentLevel + 1, getShuffledCards(currentLevel + 1)]
         : [currentLevel, getShuffledCards(currentLevel, currentLevelCards)];
-
-      console.log(
-        "comparison",
-        sortBy(newSelectedCards, ["id"]),
-        sortBy(currentLevelCards, ["id"]),
-        areAllCardsPicked
-      );
-
-      console.log({
-        ...state,
-        currentScore: newScore,
-        bestScore: newBestScore,
-        currentLevel: newCurrentLevel,
-        selectedCards: newFinalSelectedCards,
-        currentLevelCards: newCurrentLevelCards,
-      });
+      const newIsGameWon = newCurrentLevel > 4 ? true : false;
 
       return {
         ...state,
@@ -91,8 +73,14 @@ function App() {
         currentLevel: newCurrentLevel,
         selectedCards: newFinalSelectedCards,
         currentLevelCards: newCurrentLevelCards,
+        isGameWon: newIsGameWon,
       };
     });
+  };
+
+  const score = {
+    bestScore: state.bestScore,
+    currentScore: state.currentScore,
   };
 
   return (
@@ -104,15 +92,19 @@ function App() {
         <Score score={score} />
       </Header>
       <Main>
-        <CardList>
-          {state.currentLevelCards.map((card) => (
-            <Card
-              key={card.id}
-              card={{ ...card, url: getImage(card.url) }}
-              selectCard={selectCard}
-            />
-          ))}
-        </CardList>
+        {state.isGameWon ? (
+          <GameWon />
+        ) : (
+          <CardList>
+            {state.currentLevelCards.map((card) => (
+              <Card
+                key={card.id}
+                card={{ ...card, url: getImage(card.url) }}
+                selectCard={selectCard}
+              />
+            ))}
+          </CardList>
+        )}
       </Main>
       <Footer />
     </Wrapper>
