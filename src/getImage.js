@@ -11,6 +11,5 @@ const images = importAll(
 );
 
 export default function getImage(imageFileName) {
-  console.log(images[imageFileName]);
   return images[imageFileName].default;
 }
