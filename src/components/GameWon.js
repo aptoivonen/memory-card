@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const Text = styled.p`
-  font-size: 6rem;
-  font-weight: bold;
+const Component = styled.div`
   color: green;
   animation: pulse 2s infinite;
 
@@ -19,8 +17,23 @@ const Text = styled.p`
   }
 `;
 
+const Text = styled.p`
+  font-size: 6rem;
+  font-weight: bold;
+`;
+
+const SmallText = styled.p`
+  font-size: 1rem;
+  text-align: center;
+`;
+
 const GameWon = () => {
-  return <Text>You Got 'Em!</Text>;
+  return (
+    <Component>
+      <Text>You Got 'Em!</Text>
+      <SmallText>Click To Restart</SmallText>
+    </Component>
+  );
 };
 
 export default GameWon;
