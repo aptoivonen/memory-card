@@ -22,17 +22,15 @@ function App() {
     currentLevel: 1,
     selectedCards: [],
     currentLevelCards: getShuffledCards(1),
-    isGameWon: true,
+    isGameWon: false,
   }));
 
   const selectCard = (id) => {
-    console.log("selected card:", id);
     // Player clicked already picked card on this level
     const cardAlreadySelected = state.selectedCards
       .map((card) => card.id)
       .includes(id);
     if (cardAlreadySelected) {
-      console.log("card already selected!");
       setState((state) => ({
         ...state,
         currentScore: 0,
@@ -61,10 +59,16 @@ function App() {
         sortBy(currentLevelCards, ["id"])
       );
       const newFinalSelectedCards = areAllCardsPicked ? [] : newSelectedCards;
-      const [newCurrentLevel, newCurrentLevelCards] = areAllCardsPicked
-        ? [currentLevel + 1, getShuffledCards(currentLevel + 1)]
-        : [currentLevel, getShuffledCards(currentLevel, currentLevelCards)];
-      const newIsGameWon = newCurrentLevel > 4 ? true : false;
+      const [newCurrentLevel, newCurrentLevelCards, newIsGameWon] =
+        areAllCardsPicked
+          ? currentLevel < 4
+            ? [currentLevel + 1, getShuffledCards(currentLevel + 1), false]
+            : [currentLevel, [], true]
+          : [
+              currentLevel,
+              getShuffledCards(currentLevel, currentLevelCards),
+              false,
+            ];
 
       return {
         ...state,
