@@ -63,6 +63,7 @@ function App() {
         sortBy(newSelectedCards, ["id"]),
         sortBy(currentLevelCards, ["id"])
       );
+      const newFinalSelectedCards = areAllCardsPicked ? [] : newSelectedCards;
       const [newCurrentLevel, newCurrentLevelCards] = areAllCardsPicked
         ? [currentLevel + 1, getShuffledCards(currentLevel + 1)]
         : [currentLevel, getShuffledCards(currentLevel, currentLevelCards)];
@@ -79,7 +80,7 @@ function App() {
         currentScore: newScore,
         bestScore: newBestScore,
         currentLevel: newCurrentLevel,
-        selectedCards: newSelectedCards,
+        selectedCards: newFinalSelectedCards,
         currentLevelCards: newCurrentLevelCards,
       });
 
@@ -88,7 +89,7 @@ function App() {
         currentScore: newScore,
         bestScore: newBestScore,
         currentLevel: newCurrentLevel,
-        selectedCards: newSelectedCards,
+        selectedCards: newFinalSelectedCards,
         currentLevelCards: newCurrentLevelCards,
       };
     });
