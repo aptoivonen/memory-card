@@ -25,7 +25,7 @@ export const Name = styled.h2`
   align-items: center;
   height: 50px;
   order: 2;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   letter-spacing: 0.3ch;
   color: #333;
