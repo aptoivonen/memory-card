@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Component = styled.footer`
-  height: 100px;
-  padding: 1rem;
+  display: flex;
+  align-items: center;
+  height: 5ch;
+  padding-left: 1rem;
   background: #aaa;
 `;
 
