@@ -11,11 +11,11 @@ export const Component = styled.footer`
 const Footer = () => {
   return (
     <Component>
-      Icons made by{" "}
+      Icons made by&nbsp;
       <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">
         Smashicons
-      </a>{" "}
-      from{" "}
+      </a>
+      &nbsp;from&nbsp;
       <a href="https://www.flaticon.com/" title="Flaticon">
         www.flaticon.com
       </a>
