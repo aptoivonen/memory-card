@@ -10,11 +10,12 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   height: 100px;
-  background: #ccc;
+  background: #6b6b6b;
 `;
 
 export const MainTitle = styled.h1`
   margin: 0 auto 0 1ch;
+  color: #fff;
   font-size: 3rem;
   letter-spacing: 0.5ch;
 `;
