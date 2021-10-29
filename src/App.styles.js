@@ -10,7 +10,7 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   height: 100px;
-  background: #6b6b6b;
+  background: #5b5c5a;
 `;
 
 export const MainTitle = styled.h1`
@@ -35,5 +35,5 @@ export const Main = styled.main`
   align-items: center;
   justify-content: center;
   padding-top: 2rem;
-  background: #ddd;
+  background: #f4f3cd;
 `;
