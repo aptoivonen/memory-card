@@ -6,6 +6,7 @@ import NumberUpdater from "./NumberUpdater";
 const Text = styled.p`
   margin-right: auto;
   font-size: 1.5rem;
+  color: var(--light-text-color);
 `;
 
 const Level = ({ currentLevel }) => {

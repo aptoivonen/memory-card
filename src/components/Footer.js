@@ -5,6 +5,7 @@ export const Component = styled.footer`
   align-items: center;
   height: 5ch;
   padding-left: 1rem;
+  color: var(--dark-text-color);
   background: #aaa;
 `;
 

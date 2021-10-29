@@ -15,7 +15,7 @@ export const Header = styled.header`
 
 export const MainTitle = styled.h1`
   margin: 0 auto 0 1ch;
-  color: #fff;
+  color: var(--light-text-color);
   font-size: 3rem;
   letter-spacing: 0.5ch;
 `;

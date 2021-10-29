@@ -5,6 +5,7 @@ import NumberUpdater from "./NumberUpdater";
 const Wrapper = styled.div`
   margin-right: auto;
   font-size: 1.5rem;
+  color: var(--light-text-color);
 `;
 
 const Score = ({ score: { bestScore, currentScore } }) => {

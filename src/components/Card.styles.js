@@ -28,7 +28,7 @@ export const Name = styled.h2`
   font-size: 1rem;
   text-align: center;
   letter-spacing: 0.3ch;
-  color: #333;
+  color: var(--dark-text-color);
   border-top: 2px solid rgba(0, 0, 0, 0.2);
 `;
 
