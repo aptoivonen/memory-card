@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.ec3efc24.chunk.css",
+    "main.js": "/memory-card/static/js/main.f6333f06.chunk.js",
+    "main.js.map": "/memory-card/static/js/main.f6333f06.chunk.js.map",
+    "runtime-main.js": "/memory-card/static/js/runtime-main.714dd9e2.js",
+    "runtime-main.js.map": "/memory-card/static/js/runtime-main.714dd9e2.js.map",
+    "static/js/2.ed105002.chunk.js": "/memory-card/static/js/2.ed105002.chunk.js",
+    "static/js/2.ed105002.chunk.js.map": "/memory-card/static/js/2.ed105002.chunk.js.map",
+    "index.html": "/memory-card/index.html",
+    "static/css/main.ec3efc24.chunk.css.map": "/memory-card/static/css/main.ec3efc24.chunk.css.map",
+    "static/js/2.ed105002.chunk.js.LICENSE.txt": "/memory-card/static/js/2.ed105002.chunk.js.LICENSE.txt",
+    "static/media/apple.png": "/memory-card/static/media/apple.d132a04d.png",
+    "static/media/baguette.png": "/memory-card/static/media/baguette.bd46ed62.png",
+    "static/media/broccoli.png": "/memory-card/static/media/broccoli.1f0b9078.png",
+    "static/media/carrot.png": "/memory-card/static/media/carrot.39444b33.png",
+    "static/media/cheese.png": "/memory-card/static/media/cheese.d89c61d3.png",
+    "static/media/coffee.png": "/memory-card/static/media/coffee.a94bb8bf.png",
+    "static/media/lemon.png": "/memory-card/static/media/lemon.a253725d.png",
+    "static/media/pineapple.png": "/memory-card/static/media/pineapple.1c3aad6e.png",
+    "static/media/raspberry.png": "/memory-card/static/media/raspberry.f3072f5d.png",
+    "static/media/sandwich.png": "/memory-card/static/media/sandwich.d99dc8db.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.714dd9e2.js",
+    "static/js/2.ed105002.chunk.js",
+    "static/css/main.ec3efc24.chunk.css",
+    "static/js/main.f6333f06.chunk.js"
+  ]
+}
