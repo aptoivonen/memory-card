@@ -5,8 +5,16 @@ import NumberUpdater from "./NumberUpdater";
 
 const Text = styled.p`
   margin-right: auto;
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   color: var(--light-text-color);
+
+  @media (min-width: 700px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Level = ({ currentLevel }) => {
