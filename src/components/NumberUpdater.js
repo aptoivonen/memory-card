@@ -32,20 +32,22 @@ const NumberUpdater = ({ children }) => {
   };
 
   return (
-    <CSSTransition
-      in={hasCurrentNumberChanged}
-      timeout={ANIMATION_DURATION}
-      classNames={"number-update"}
-      nodeRef={displayRef}
-      onEntered={handleNumberChangeEffectEnd}
-    >
-      <Display
-        ref={displayRef}
-        style={{ "--number-animation-duration": `${ANIMATION_DURATION}ms` }}
+    <Display>
+      <CSSTransition
+        in={hasCurrentNumberChanged}
+        timeout={ANIMATION_DURATION}
+        classNames={"number-update"}
+        nodeRef={displayRef}
+        onEntered={handleNumberChangeEffectEnd}
       >
-        {children}
-      </Display>
-    </CSSTransition>
+        <span
+          ref={displayRef}
+          style={{ "--number-animation-duration": `${ANIMATION_DURATION}ms` }}
+        >
+          {children}
+        </span>
+      </CSSTransition>
+    </Display>
   );
 };
 
