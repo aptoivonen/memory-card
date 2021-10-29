@@ -1,0 +1,17 @@
+.number-update-enter {
+  color: greenyellow;
+  font-weight: bold;
+  opacity: 1;
+}
+.number-update-enter-active {
+  transform: scale(2);
+  opacity: 0;
+  transition: all 500ms;
+}
+.number-update-exit {
+  opacity: 0;
+}
+.number-update-exit-active {
+  opacity: 1;
+  transition: all 0ms;
+}
