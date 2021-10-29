@@ -9,6 +9,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  :root {
+    --light-text-color: #fff;
+    --dark-text-color: #2c2c2c;
+  }
+
   body {
     font-family: 'Rock Salt', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
