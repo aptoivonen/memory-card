@@ -18,8 +18,6 @@ const NumberUpdater = ({ children }) => {
   const [hasCurrentNumberChanged, setHasCurrentNumberChanged] = useState(false);
   const currentNumberRef = useRef(null);
 
-  console.log("children", children);
-
   useDidUpdateEffect(() => {
     setHasCurrentNumberChanged(true);
   }, [children]);
