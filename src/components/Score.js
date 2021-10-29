@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import NumberUpdater from "./NumberUpdater";
 
 const Wrapper = styled.div`
   margin-right: auto;
@@ -9,7 +10,8 @@ const Wrapper = styled.div`
 const Score = ({ score: { bestScore, currentScore } }) => {
   return (
     <Wrapper>
-      Current Score: {currentScore} | Best Score: {bestScore}
+      Current Score: <NumberUpdater>{currentScore}</NumberUpdater>| Best Score:{" "}
+      <NumberUpdater>{bestScore}</NumberUpdater>
     </Wrapper>
   );
 };

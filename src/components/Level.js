@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import NumberUpdater from "./NumberUpdater";
 
 const Text = styled.p`
   margin-right: auto;
@@ -8,7 +9,11 @@ const Text = styled.p`
 `;
 
 const Level = ({ currentLevel }) => {
-  return <Text>Level {currentLevel}</Text>;
+  return (
+    <Text>
+      Level <NumberUpdater>{currentLevel}</NumberUpdater>
+    </Text>
+  );
 };
 
 Level.propTypes = {
