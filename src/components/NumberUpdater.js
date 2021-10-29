@@ -1,13 +1,13 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDidUpdateEffect } from "../useUtils";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 import "./NumberUpdater.css";
 
-const DELAY = 500;
+const ANIMATION_DURATION = 500;
 
-const Wrapper = styled.span`
+const Display = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,12 @@ const Wrapper = styled.span`
 
 const NumberUpdater = ({ children }) => {
   const [hasCurrentNumberChanged, setHasCurrentNumberChanged] = useState(false);
-  const currentNumberRef = useRef(null);
+  const displayRef = useRef(null);
+  const previousNumberRef = useRef();
+
+  useEffect(() => {
+    previousNumberRef.current = children;
+  }, [children]);
 
   useDidUpdateEffect(() => {
     setHasCurrentNumberChanged(true);
@@ -25,15 +30,21 @@ const NumberUpdater = ({ children }) => {
   const handleNumberChangeEffectEnd = () => {
     setHasCurrentNumberChanged(false);
   };
+
   return (
     <CSSTransition
       in={hasCurrentNumberChanged}
-      timeout={DELAY}
-      classNames="number-update"
-      nodeRef={currentNumberRef}
+      timeout={ANIMATION_DURATION}
+      classNames={"number-update"}
+      nodeRef={displayRef}
       onEntered={handleNumberChangeEffectEnd}
     >
-      <Wrapper ref={currentNumberRef}>{children}</Wrapper>
+      <Display
+        ref={displayRef}
+        style={{ "--number-animation-duration": `${ANIMATION_DURATION}ms` }}
+      >
+        {children}
+      </Display>
     </CSSTransition>
   );
 };
